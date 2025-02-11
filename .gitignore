@@ -10,6 +10,9 @@ __pycache__/
 # Distribution / packaging
 .Python
 Kokoro-82M-v1.0-ONNX/
+faster-whisper-large-v3/
+whisper-large-v3-turbo/
+output.txt
 build/
 develop-eggs/
 dist/
