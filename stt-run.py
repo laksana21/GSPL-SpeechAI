@@ -1,4 +1,5 @@
 import torch
+import os
 import numpy as np
 import speech_recognition as sr
 from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, pipeline
@@ -119,14 +120,14 @@ def main():
                     transcription[-1] = text
 
                 # Clear the console to reprint the updated transcription.
-                os.system('cls' if os.name=='nt' else 'clear')
+                # os.system('cls' if os.name=='nt' else 'clear')
                 for line in transcription:
                     print(line)
                 # Flush stdout.
                 print('', end='', flush=True)
             else:
                 # Infinite loops are bad for processors, must sleep.
-                sleep(0.25)
+                sleep(0.05)
         except KeyboardInterrupt:
             break
 
