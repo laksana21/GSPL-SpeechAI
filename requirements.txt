@@ -1,0 +1,11 @@
+setuptools
+pyaudio
+onnxruntime
+SpeechRecognition
+kokoro_onnx
+sounddevice
+scipy
+--extra-index-url https://download.pytorch.org/whl/cu116
+torch
+numpy
+git+https://github.com/openai/whisper.git
