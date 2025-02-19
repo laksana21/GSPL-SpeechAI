@@ -3,15 +3,15 @@
 
 import os
 import pyaudio
-#import time
+import time
 import numpy as np
 from onnxruntime import InferenceSession
 from kokoro_onnx.tokenizer import Tokenizer
-#import scipy.io.wavfile as wavfile
+import scipy.io.wavfile as wavfile
 import sounddevice as sd
 
 def main():
-	#start_time = time.time()
+	start_time = time.time()
 	# Text you want to speak
 	text_input = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 
@@ -37,12 +37,12 @@ def main():
 		speed=np.ones(1, dtype=np.float32),
 	))[0]
 
-	#print("--- %s seconds ---" % (time.time() - start_time))
+	print("--- %s seconds ---" % (time.time() - start_time))
 
-	sd.play(audio[0], 24000)
-	sd.wait()
+	#sd.play(audio[0], 24000)
+	#sd.wait()
 
-	#wavfile.write('audio.wav', 24000, audio[0])
+	wavfile.write('audio.wav', 24000, audio[0])
 
 
 if __name__ == "__main__":
